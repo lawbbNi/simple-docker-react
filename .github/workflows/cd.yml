@@ -37,9 +37,9 @@ jobs:
         run: |
           aws elasticbeanstalk create-application-version \
             --application-name sample-docker-01-react \
-            --version-label ${{ github.sha }}-${{ github.run_id }} \
+            --version-label ${{ github.sha }} \
             --source-bundle S3Bucket="elasticbeanstalk-ap-southeast-2-211999944012",S3Key="deploy_package.zip"
           
           aws elasticbeanstalk update-environment \
             --environment-name Sample-docker-01-react-env \
-            --version-label ${{ github.sha }}-${{ github.run_id }}elasticbeanstalk-ap-southeast-2-211999944012
+            --version-label ${{ github.sha }}elasticbeanstalk-ap-southeast-2-211999944012
