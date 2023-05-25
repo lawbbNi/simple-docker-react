@@ -42,4 +42,4 @@ jobs:
           
           aws elasticbeanstalk update-environment \
             --environment-name Sample-docker-01-react-env \
-            --version-label ${{ github.sha }}elasticbeanstalk-ap-southeast-2-211999944012
+            --version-label ${{ github.sha }}
